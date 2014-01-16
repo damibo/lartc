@@ -1,0 +1,6 @@
+#!/bin/sh
+	tail -1000 lartc.txt | grep "^     \*" | cut -f1 -d\< | cut -f2 -d\* |
+	tr \\n "," | 
+	sed "s/ , /, /g" |
+	sed "s/,$//" 
+
